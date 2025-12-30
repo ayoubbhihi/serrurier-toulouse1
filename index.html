@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header">d</div>
+
+
+
+    <main>
+        <section id="hero">…</section>
+        <section id="services"></section>
+        <section id="reviews"></section>
+        <section id="faq"></section>
+
+        <div id="cta"></div>
+    </main>
+
+    <div id="footer"></div>
+
+
+
+    <!-- <script>
+        (function () {
+            const components = [
+                { id: 'header', file: 'header.html' },
+                { id: 'footer', file: 'footer.html' },
+                // { id: 'cta', file: 'cta-call.html' },
+                { id: 'reviews', file: 'reviews.html' },
+                { id: 'faq', file: 'faq.html' }
+            ]
+
+            async function loadComponent(id, file) {
+                const el = document.getElementById(id)
+                if (!el) return
+
+                try {
+                    const res = await fetch(`./components/${file}`, { cache: 'no-store' })
+                    if (!res.ok) throw new Error(file)
+                    el.innerHTML = await res.text()
+                } catch (e) {
+                    console.warn(`Component not loaded: ${file}`)
+                }
+            }
+
+            components.forEach(c => loadComponent(c.id, c.file))
+        })()
+    </script> -->
+
+
+    <script>
+        window.pageComponents = [
+            { id: 'header', file: 'header.html' },
+            { id: 'reviews', file: 'reviews.html' },
+            { id: 'faq', file: 'faq.html' },
+            { id: 'footer', file: 'footer.html' }
+        ]
+    </script>
+
+    <script src="./assets/js/components-loader.js"></script>
+
+</body>
+
+</html>

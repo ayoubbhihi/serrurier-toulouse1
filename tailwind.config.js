@@ -6,7 +6,11 @@ module.exports = {
       "./assets/js/**/*.js"
     ],
     theme: {
-      extend: {},
+      extend: {
+        fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      },
     },
     plugins: [
       require("daisyui")
